@@ -1,0 +1,367 @@
+body, html {
+    height: 100vh;
+    background: rgb(39, 48, 55);
+}
+
+body {
+    color: rgb(240, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Roboto', 'Lato', 'Arial', sans-serif;
+}
+
+.highlight {
+    color: rgb(184, 106, 36) !important;
+}
+
+.title-bar {
+    color: rgb(101, 109, 116);
+    background: rgb(27, 35, 42);
+
+    flex: 0 0 49px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.title-bar .menu {
+    width: 300px;
+    padding-left: 15px;
+}
+
+.title-bar .menu ul {
+    display: flex;
+    align-items: center;
+    height: 49px;
+}
+
+.title-bar .menu li {
+    flex: 0;
+    padding: 0 10px;
+}
+
+.title-bar .menu li.logo {
+    padding-right: 5px;
+}
+
+.title-bar .menu .logo .origin-logo-hurricane {
+    font-size: 25px;
+}
+
+.title-bar .search-bar {
+    flex: 1 0 350px;
+    position: relative;
+}
+
+.title-bar .search-bar .otkinput-icon {
+    color: rgb(77, 84, 91);
+    font-size: 30px;
+    left: 0;
+}
+
+.title-bar .search-bar .search {
+    /** Allow styling of search input type **/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    padding: 14px;
+    padding-left: 0;
+
+    border: 0;
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    color: white;
+}
+
+.title-bar .search-bar .search:focus {
+    outline: 0;
+}
+
+.title-bar .window-controls {
+    flex: 0;
+    align-self: flex-end;
+}
+.title-bar .window-controls ul {
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+
+.title-bar .window-controls li {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 14px !important;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.title-bar .window-controls li:hover {
+    color: rgb(240, 240, 240);
+}
+
+.title-bar .window-controls li.close {
+    font-size: 16px !important;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.container .left-sidebar, .container .right-sidebar {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(30, 38, 45);
+    border-top: 1px solid rgb(44, 55, 63);
+}
+
+.container .right-sidebar {
+    border-left: 1px solid rgb(30, 38, 45);
+}
+
+.container .content {
+    flex: 1 0 400px;
+    overflow-y: scroll;
+}
+
+.container .left-sidebar .pushdown {
+    flex: 1;
+    color: rgb(68, 75, 82);
+    padding-top: 20px;
+    overflow-y: scroll;
+}
+
+.container .left-sidebar .pushdown > section {
+    margin-bottom: 20px;
+}
+
+.container .left-sidebar .pushdown h2 {
+    color: rgb(240, 240, 240);
+    font-size: 18px;
+    padding: 15px 20px;
+}
+
+.container .left-sidebar .pushdown h2.active {
+    padding-left: 18px;
+    border-image: linear-gradient(to bottom, rgb(210, 131, 46), rgb(210, 98, 42)) 1 100%;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.container .left-sidebar .pushdown li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.container .left-sidebar .pushdown li:hover {
+    color: rgb(240, 240, 240);
+}
+
+.container .left-sidebar .copyright {
+    flex: 0;
+    align-self: flex-end;
+    color: rgb(94, 102, 109);
+    padding: 20px;
+}
+
+.container .left-sidebar .copyright small {
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+}
+
+.container .right-sidebar .tabs {
+    display: flex;
+    flex-direction: column;
+}
+.container .right-sidebar .tab-menu {
+    margin-bottom: 20px;
+}
+.container .right-sidebar .tab-menu ul {
+    display: flex;
+    background: rgb(27, 35, 42);
+    border-bottom: 1px solid rgb(44, 55, 63);
+}
+.container .right-sidebar .tab-menu li {
+    flex: 1;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .2s linear;
+}
+
+.container .right-sidebar .tab-menu li .highlight {
+    margin-left: 4px;
+}
+
+.container .right-sidebar .tab-menu li.active, .container .right-sidebar .tab-menu li:hover {
+    background: rgb(44, 55, 63);
+}
+
+.container .right-sidebar .friends-list {
+    overflow-y: scroll;
+}
+
+.container .right-sidebar .label {
+    color: rgb(77, 84, 91);
+    padding: 0 20px;
+}
+
+.container .right-sidebar .online {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(44, 55, 63);
+}
+
+.container .right-sidebar .offline .profile {
+    opacity: 0.4;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile .profile-picture {
+    flex: 0 0 50px;
+}
+
+.profile .profile-picture img {
+    height: 50px;
+    width: 50px;
+}
+
+.profile .details {
+    flex: 1;
+    padding-left: 20px;
+    line-height: 20px;
+}
+
+.profile .details .username {
+    display: block;
+}
+.profile .details .game, .profile .details .points, .profile .details .last-seen {
+    color: rgb(77, 84, 91);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.profile .details .origin-logo-hurricane {
+    font-size: 14px;
+}
+
+.profile .status {
+    flex: 0 0 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.profile .status.status-online .fa-circle {
+    color: rgb(48, 214, 117);
+}
+
+.profile .status.status-away .fa-circle {
+    color: rgb(215, 181, 52);
+}
+
+.profile .status .fa-caret-down {
+    margin-left: 5px;
+    color: rgb(97, 115, 112);
+}
+
+.container .search-attributes {
+    padding: 40px 20px;
+}
+
+.container .search-attributes .attribute {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.container .search-attributes .label {
+    color: rgb(98, 106, 113);
+    margin-right: 10px;
+}
+
+.container .search-attributes .fa {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1px;
+}
+
+.game-grid .game {
+    flex: 0 230px;
+    margin: 0 19px 40px;
+}
+
+.game-grid .game .details {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.game-grid .game h2 {
+    flex: 1;
+}
+
+.game-grid .game .fa-star {
+    flex: 0 0 20px;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.game-grid .game .fa-star:hover {
+    color: rgb(253, 112, 34);
+}
+
+.game-grid .game .fa-star.starred {
+    color: rgb(253, 112, 34);
+}
+
+.game-grid .game .fa-star.starred:hover {
+    color: rgb(240, 240, 240);
+}
+
+.game-grid .fellow-players {
+    color: rgb(77, 84, 91);
+    font-size: 12px;
+}
+
+.game-grid .fellow-players span {
+    vertical-align: super;
+}
+
+.game-grid .fellow-players ul {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.game-grid .fellow-players li {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.game-grid .fellow-players img {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
