@@ -24,6 +24,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    -webkit-app-region: drag
 }
 
 .title-bar .menu {
@@ -40,6 +41,12 @@ body {
 .title-bar .menu li {
     flex: 0;
     padding: 0 10px;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.title-bar .menu li:hover {
+    color: rgb(240, 240, 240);
 }
 
 .title-bar .menu li.logo {
@@ -53,6 +60,7 @@ body {
 .title-bar .search-bar {
     flex: 1 0 350px;
     position: relative;
+    padding-right: 20px;
 }
 
 .title-bar .search-bar .otkinput-icon {
@@ -102,14 +110,19 @@ body {
     font-size: 14px !important;
     cursor: pointer;
     transition: color .2s linear;
+    -webkit-app-region: no-drag;
+}
+
+.title-bar .window-controls li, .title-bar .window-controls li .fa {
+    cursor: pointer;
 }
 
 .title-bar .window-controls li:hover {
     color: rgb(240, 240, 240);
 }
 
-.title-bar .window-controls li.close {
-    font-size: 16px !important;
+.title-bar .window-controls #close {
+    font-size: 17px !important;
 }
 
 .container {
@@ -148,18 +161,18 @@ body {
 .container .left-sidebar .pushdown h2 {
     color: rgb(240, 240, 240);
     font-size: 18px;
-    padding: 15px 20px;
+    padding: 15px 25px;
 }
 
 .container .left-sidebar .pushdown h2.active {
-    padding-left: 18px;
+    padding-left: 23px;
     border-image: linear-gradient(to bottom, rgb(210, 131, 46), rgb(210, 98, 42)) 1 100%;
     border-left-width: 2px;
     border-left-style: solid;
 }
 
 .container .left-sidebar .pushdown li {
-    padding: 10px 20px;
+    padding: 10px 25px;
     cursor: pointer;
     transition: color .2s linear;
 }
@@ -172,7 +185,7 @@ body {
     flex: 0;
     align-self: flex-end;
     color: rgb(94, 102, 109);
-    padding: 20px;
+    padding: 20px 25px;
 }
 
 .container .left-sidebar .copyright small {
@@ -214,9 +227,18 @@ body {
     overflow-y: scroll;
 }
 
-.container .right-sidebar .label {
-    color: rgb(77, 84, 91);
+.container .right-sidebar .friends-list .profile {
     padding: 0 20px;
+}
+
+.container .right-sidebar .friends-list li {
+    padding-bottom: 20px;
+}
+
+.container .right-sidebar .label {
+    displaY: block;
+    color: rgb(77, 84, 91);
+    padding: 0 20px 20px;
 }
 
 .container .right-sidebar .online {
@@ -236,12 +258,12 @@ body {
 }
 
 .profile .profile-picture {
-    flex: 0 0 50px;
+    flex: 0 0 40px;
 }
 
 .profile .profile-picture img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .profile .details {

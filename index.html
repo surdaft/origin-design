@@ -4,9 +4,9 @@
         <title>Origin</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-        <link rel="stylesheet" href="/assets/origin.css">
-        <link rel="stylesheet" href="/assets/font-awesome.css">
-        <link rel="stylesheet" href="/assets/app.css">
+        <link rel="stylesheet" href="assets/origin.css">
+        <link rel="stylesheet" href="assets/font-awesome.css">
+        <link rel="stylesheet" href="assets/app.css">
     </head>
     <body>
         <header class="title-bar">
@@ -28,9 +28,9 @@
             </section>
             <section class="window-controls">
                 <ul>
-                    <li class="minimise"><i class="fa fa-window-minimize" aria-hidden="true"></i></li>
-                    <li class="maximise"><i class="fa fa-window-maximize" aria-hidden="true"></i></li>
-                    <li class="close"><i class="fa fa-close" aria-hidden="true"></i></li>
+                    <li id="minimize"><i class="fa fa-window-minimize" aria-hidden="true"></i></li>
+                    <li id="maximize"><i class="fa fa-window-maximize" aria-hidden="true"></i></li>
+                    <li id="close"><i class="fa fa-close" aria-hidden="true"></i></li>
                 </ul>
             </section>
         </header>
@@ -96,10 +96,10 @@
                             <span>Friends Who Play</span>
                             <ul>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                             </ul>
                         </div>
@@ -116,10 +116,10 @@
                             <span>Friends Who Play</span>
                             <ul>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                             </ul>
                         </div>
@@ -136,13 +136,13 @@
                             <span>Friends Who Play</span>
                             <ul>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                             </ul>
                         </div>
@@ -159,7 +159,7 @@
                             <span>Friends Who Play</span>
                             <ul>
                                 <li>
-                                    <img src="/assets/avatar_placeholder.png" alt="Avatar">
+                                    <img src="assets/avatar_placeholder.png" alt="Avatar">
                                 </li>
                             </ul>
                         </div>
@@ -169,7 +169,7 @@
             <aside class="right-sidebar">
                 <section class="profile">
                     <div class="profile-picture">
-                        <img src="/assets/avatar_placeholder.png" alt="Profile Picture">
+                        <img src="assets/avatar_placeholder.png" alt="Profile Picture">
                     </div>
                     <div class="details">
                         <span class="username">SurDaft</span>
@@ -196,7 +196,7 @@
                             <li>
                                 <div class="profile">
                                     <div class="profile-picture">
-                                        <img src="/assets/avatar_placeholder.png" alt="Profile Picture">
+                                        <img src="assets/avatar_placeholder.png" alt="Profile Picture">
                                     </div>
                                     <div class="details">
                                         <span class="username">Gekokid</span>
@@ -209,13 +209,29 @@
                                     </div>
                                 </div>
                             </li>
+                            <li>
+                                <div class="profile">
+                                    <div class="profile-picture">
+                                        <img src="assets/avatar_placeholder.png" alt="Profile Picture">
+                                    </div>
+                                    <div class="details">
+                                        <span class="username">AIScots</span>
+                                        <span class="game">
+
+                                        </span>
+                                    </div>
+                                    <div class="status status-away">
+                                        <i class="fa fa-circle" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                         <span class="label">2 Friends Offline</span>
                         <ul class="offline">
                             <li>
                                 <div class="profile">
                                     <div class="profile-picture">
-                                        <img src="/assets/avatar_placeholder.png" alt="Profile Picture">
+                                        <img src="assets/avatar_placeholder.png" alt="Profile Picture">
                                     </div>
                                     <div class="details">
                                         <span class="username">Faybuh</span>
@@ -231,7 +247,7 @@
                             <li>
                                 <div class="profile">
                                     <div class="profile-picture">
-                                        <img src="/assets/avatar_placeholder.png" alt="Profile Picture">
+                                        <img src="assets/avatar_placeholder.png" alt="Profile Picture">
                                     </div>
                                     <div class="details">
                                         <span class="username">Tartas1995</span>
@@ -249,5 +265,7 @@
                 </section>
             </aside>
         </main>
+
+        <script src="assets/app.js"></script>
     </body>
 </html>
