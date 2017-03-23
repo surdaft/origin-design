@@ -24,7 +24,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    -webkit-app-region: drag
+    -webkit-app-region: drag;
+    border-bottom: 1px solid rgb(44, 55, 63);
 }
 
 .title-bar .menu {
@@ -135,7 +136,6 @@ body {
     display: flex;
     flex-direction: column;
     background: rgb(30, 38, 45);
-    border-top: 1px solid rgb(44, 55, 63);
 }
 
 .container .right-sidebar {
