@@ -5,11 +5,27 @@ body, html {
 
 body {
     color: rgb(240, 240, 240);
+    font-family: 'Roboto', 'Lato', 'Arial', sans-serif;
 
     display: flex;
     flex-direction: column;
+}
 
-    font-family: 'Roboto', 'Lato', 'Arial', sans-serif;
+a {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+a:hover {
+    color: rgb(184, 106, 36);
+}
+
+#app-wrapper {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .highlight {
@@ -386,4 +402,26 @@ body {
     width: 20px;
     border-radius: 3px;
     overflow: hidden;
+}
+
+.messages li:first-child .message {
+    padding-top: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    line-height: 20px;
+}
+
+.message .username {
+    flex: 1;
+}
+
+.message .timestamp {
+    flex: 1;
+    color: rgb(77, 84, 91);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
