@@ -16,7 +16,8 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 1410,
         height: 800,
-        frame: false
+        frame: false,
+        title: "Origin"
     });
 
     require('./menu.js');
